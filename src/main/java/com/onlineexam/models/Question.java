@@ -1,3 +1,5 @@
+package com.onlineexam.models;
+
 public class Question {
     private int questionId;
     private int examId;
@@ -7,6 +9,14 @@ public class Question {
 
     public Question(int questionId, int examId, String questionText, String[] options, String correctAnswer) {
         this.questionId = questionId;
+        this.examId = examId;
+        this.questionText = questionText;
+        this.options = options;
+        this.correctAnswer = correctAnswer;
+    }
+
+    // Constructor without questionId for new questions
+    public Question(int examId, String questionText, String[] options, String correctAnswer) {
         this.examId = examId;
         this.questionText = questionText;
         this.options = options;
